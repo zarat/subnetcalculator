@@ -61,20 +61,12 @@ Netzwerk 4:
 Host Adressen: 248/254 (97%)
 ```
 
-Der Parameter -v teilt ein gegebenes Netzwerk in Subnetze unterschiedlicher (oder auch gleicher) Länge. Möchte man das Netzwerk 192.168.0.0/24 in 3 Subnetze teilen wobei ein Subnetz mindestens 14, eines mindestens 60 und eines mindestens 4 haben soll gibt man die Anzahl der Hosts mit Comma getrennt und ohne Leerzeichen als Parameter an.
+Der Parameter -v teilt ein gegebenes Netzwerk in Subnetze unterschiedlicher (oder auch gleicher) Länge. Möchte man das Netzwerk 192.168.0.0/24 in 3 Subnetze teilen wobei ein Subnetz mindestens 14, eines mindestens 60 und eines mindestens 4 haben soll gibt man die Anzahl der Hosts mit Comma getrennt und ohne Leerzeichen als Parameter an. **Achtung**, derzeit müssen die Zahlen in absteigender Reihenfolge, beginnend bei der größten, angegeben werden.
 
 ```
-main -v 192.168.0.0 24 14,60,4
+main -v 192.168.0.0 24 60,14,4
 
 Netzwerk: 1
-        Netzwerkadresse: 192.168.0.0/28
-        Erste Host-Adresse: 192.168.0.1
-        Letzte Host-Adresse: 192.168.0.14
-        Broadcast-Adresse: 192.168.0.15
-        Verfuegbare Hosts: 14
-        Subnetzmaske: 255.255.255.240
-
-Netzwerk: 2
         Netzwerkadresse: 192.168.0.0/26
         Erste Host-Adresse: 192.168.0.1
         Letzte Host-Adresse: 192.168.0.62
@@ -82,13 +74,21 @@ Netzwerk: 2
         Verfuegbare Hosts: 62
         Subnetzmaske: 255.255.255.192
 
-Netzwerk: 3
-        Netzwerkadresse: 192.168.0.64/29
+Netzwerk: 2
+        Netzwerkadresse: 192.168.0.64/28
         Erste Host-Adresse: 192.168.0.65
-        Letzte Host-Adresse: 192.168.0.70
-        Broadcast-Adresse: 192.168.0.71
+        Letzte Host-Adresse: 192.168.0.78
+        Broadcast-Adresse: 192.168.0.79
+        Verfuegbare Hosts: 14
+        Subnetzmaske: 255.255.255.240
+
+Netzwerk: 3
+        Netzwerkadresse: 192.168.0.80/29
+        Erste Host-Adresse: 192.168.0.81
+        Letzte Host-Adresse: 192.168.0.86
+        Broadcast-Adresse: 192.168.0.87
         Verfuegbare Hosts: 6
         Subnetzmaske: 255.255.255.248
-        
+
 Host Adressen: 82/254 (32%)
 ```
