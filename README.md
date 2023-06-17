@@ -2,15 +2,15 @@
 
 ```
 Usage:
-        prog.exe -c <ip> <netmask> --> show network info
-        prog.exe -s <ip> <netmask> <n> --> split network into <n> subnets
-        prog.exe -v <ip> <netmask> <subnets/hosts per subnet> --> split network into several subnets, define the hosts like 100,40,10
+        sc.exe -c <ip> <netmask> --> show network info
+        sc.exe -s <ip> <netmask> <n> --> split network into <n> subnets
+        sc.exe -v <ip> <netmask> <subnets/hosts per subnet> --> split network into several subnets, define the hosts like 100,40,10
 ```
 
 Der Parameter -c gibt all Informationen zu dem Netzwerk aus, in dem sich eine IP Adresse befindet.
 
 ```
-main -c 192.168.0.30 24
+sc -c 192.168.0.30 24
 
 Netzwerk:
         Netzwerkadresse: 192.168.0.0/24
@@ -24,7 +24,7 @@ Netzwerk:
 Der Parameter -s teilt ein gegebenes Netzwerk in eine bestimmte Anzahl Subnetze gleicher Länge.
 
 ```
-main -s 192.168.0.0 24 4
+sc -s 192.168.0.0 24 4
 
 Netzwerk 1:
         Netzwerkadresse: 192.168.0.0/26
@@ -64,7 +64,7 @@ Host Adressen: 248/254 (97%)
 Der Parameter -v teilt ein gegebenes Netzwerk in Subnetze unterschiedlicher (oder auch gleicher) Länge. Möchte man das Netzwerk 192.168.0.0/24 in 3 Subnetze teilen wobei ein Subnetz mindestens 14, eines mindestens 60 und eines mindestens 4 haben soll gibt man die Anzahl der Hosts mit Comma getrennt und ohne Leerzeichen als Parameter an. **Achtung**, derzeit müssen die Zahlen in absteigender Reihenfolge, beginnend bei der größten, angegeben werden.
 
 ```
-main -v 192.168.0.0 24 60,14,4
+sc -v 192.168.0.0 24 60,14,4
 
 Netzwerk: 1
         Netzwerkadresse: 192.168.0.0/26
