@@ -92,3 +92,14 @@ Netzwerk: 3
 
 Host Adressen: 82/254 (32%)
 ```
+
+Der Parameter -h gibt eine Tabelle aus mit der Sie jede Aufgabe in Sekunden meistern! Eine **Erklärung dazu kommt bald**.
+
+```
+sc -h
+
+3. Oktett                                                    |  4. Oktett
+255     128     192     224     240     248     252     254     255     128     192     224     240     248     252     254     255
+65536   32768   16384   8192    4096    2048    1024    512     256     128     64      32      16      8       4       2       1
+/16     /17     /18     /19     /20     /21     /22     /23     /24     /25     /26     /27     /28     /29     /30     /31     /32
+```
